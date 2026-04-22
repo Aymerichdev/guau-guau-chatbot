@@ -59,6 +59,7 @@ export function ProductCard({ product, onSelect }: ProductCardProps) {
           Ver más
         </Button>
       </div>
+      </div>
     </motion.article>
   );
 }
