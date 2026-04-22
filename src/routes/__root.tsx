@@ -29,14 +29,18 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Guau guau chatbot" },
+      { name: "description", content: "Guau Guau Pet Shop is a web application featuring a pet product marketplace and an AI-powered chatbot." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Guau guau chatbot" },
+      { property: "og:description", content: "Guau Guau Pet Shop is a web application featuring a pet product marketplace and an AI-powered chatbot." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Guau guau chatbot" },
+      { name: "twitter:description", content: "Guau Guau Pet Shop is a web application featuring a pet product marketplace and an AI-powered chatbot." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/wCdnqjbD7kMHf7ahSowe1B5WYPE3/social-images/social-1776883924026-WhatsApp_Image_2026-04-22_at_12.51.43_PM.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/wCdnqjbD7kMHf7ahSowe1B5WYPE3/social-images/social-1776883924026-WhatsApp_Image_2026-04-22_at_12.51.43_PM.webp" },
     ],
     links: [
       {
