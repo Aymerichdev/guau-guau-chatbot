@@ -1,11 +1,3 @@
-import imgAlimentos from "@/assets/cat-alimentos.jpg";
-import imgSnacks from "@/assets/cat-snacks.jpg";
-import imgJuguetes from "@/assets/cat-juguetes.jpg";
-import imgAccesorios from "@/assets/cat-accesorios.jpg";
-import imgGrooming from "@/assets/cat-grooming.jpg";
-import imgSalud from "@/assets/cat-salud.jpg";
-import imgOtros from "@/assets/cat-otros.jpg";
-
 export type Category =
   | "Alimentos"
   | "Snacks"
@@ -23,18 +15,6 @@ export interface Product {
   emoji: string;
   price: number; // colones
 }
-
-export const CATEGORY_IMAGES: Record<Category, string> = {
-  Alimentos: imgAlimentos,
-  Snacks: imgSnacks,
-  Juguetes: imgJuguetes,
-  Accesorios: imgAccesorios,
-  Grooming: imgGrooming,
-  Salud: imgSalud,
-  Otros: imgOtros,
-};
-
-export const getProductImage = (product: Product) => CATEGORY_IMAGES[product.category];
 
 export const CATEGORIES: { name: "Todos" | Category; emoji: string }[] = [
   { name: "Todos", emoji: "✨" },
