@@ -19,6 +19,7 @@
  */
 
 @theme inline {
+  --color-primary-soft: var(--primary-soft);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -62,26 +63,34 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
+  --radius: 0.75rem;
+  /* Guau Guau Pet Shop — Brand colors derived from logo */
+  --background: oklch(0.985 0.008 17);            /* #FDF5F5 */
+  --foreground: oklch(0.18 0.06 25);              /* #2C0A0A */
+  --card: oklch(1 0 0);                           /* white */
+  --card-foreground: oklch(0.18 0.06 25);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
+  --popover-foreground: oklch(0.18 0.06 25);
+  --primary: oklch(0.42 0.155 27);                /* #8B1A1A wine red */
+  --primary-foreground: oklch(1 0 0);
+  --primary-soft: oklch(0.96 0.02 17);            /* #F9EEEE bot bubble */
+  --secondary: oklch(0.47 0.16 27);               /* #A52020 accent */
+  --secondary-foreground: oklch(1 0 0);
+  --muted: oklch(0.96 0.012 17);
+  --muted-foreground: oklch(0.45 0.02 20);        /* #555 */
+  --accent: oklch(0.96 0.02 17);
+  --accent-foreground: oklch(0.42 0.155 27);
   --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.92 0.015 17);
+  --input: oklch(0.92 0.015 17);
+  --ring: oklch(0.42 0.155 27);
+
+  /* Brand effects */
+  --shadow-card: 0 2px 8px -2px oklch(0.42 0.155 27 / 0.08), 0 4px 16px -4px oklch(0.42 0.155 27 / 0.06);
+  --shadow-card-hover: 0 8px 24px -4px oklch(0.42 0.155 27 / 0.18);
+  --gradient-brand: linear-gradient(135deg, oklch(0.42 0.155 27), oklch(0.47 0.16 27));
+  --transition-smooth: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -140,5 +149,29 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: ui-rounded, "SF Pro Rounded", "Nunito", system-ui, sans-serif;
   }
 }
+
+/* Typing indicator animation */
+@keyframes typing-bounce {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+  30% { transform: translateY(-6px); opacity: 1; }
+}
+.typing-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--color-primary);
+  animation: typing-bounce 1.2s infinite ease-in-out;
+}
+.typing-dot:nth-child(2) { animation-delay: 0.15s; }
+.typing-dot:nth-child(3) { animation-delay: 0.3s; }
+
+/* Markdown polish inside chat bubbles */
+.chat-md p { margin: 0; }
+.chat-md p + p { margin-top: 0.5rem; }
+.chat-md ul, .chat-md ol { margin: 0.25rem 0 0.25rem 1.1rem; }
+.chat-md li { margin: 0.1rem 0; }
+.chat-md strong { font-weight: 600; }
