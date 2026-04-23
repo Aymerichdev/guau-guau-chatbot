@@ -5,14 +5,32 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type",
 };
 
-const CATALOG = `CATÁLOGO DE PRODUCTOS:
-ALIMENTOS: Purina Pro Plan cachorro (perros jóvenes), Purina Pro Plan adulto (perros adultos), Purina Pro Plan gato, NutriSource perro, NutriSource gato, Balance perro adulto, Balance cachorro, Diamond Maintenance Cat, Pedigree croquetas, Biscrok snacks, Alimento húmedo para gato, Alimento premium razas pequeñas.
-SNACKS: Huesos masticables, Galletas Dukan, Premios dentales, Snacks naturales, Treats para entrenamiento.
-JUGUETES: Peluche squeaky, Kong rellenable, Cuerda para tirar, Pelotas de caucho, Juguetes interactivos, Mordedores.
-ACCESORIOS: Camas para perro, Camas para gato, Platos para comida, Dispensadores de agua, Collares, Correas, Arnés.
-GROOMING: Shampoo para perro, Shampoo para gato, Corte de uñas, Limpieza de oídos, Cepillos, Servicios de grooming.
-SALUD: Vitaminas, Suplementos, Productos calmantes, Control de pulgas.
-OTROS: Arena para gato, Comida para conejo, Heno, Jaulas pequeñas.`;
+const CATALOG = `CATÁLOGO OFICIAL DE PRODUCTOS:
+
+ALIMENTOS PERROS Y GATOS:
+- Purina: Dog Chow (adulto/cachorro), Cat Chow, Pro Plan (perro adulto/cachorro/gato), Alpo, Friskies, Felix húmedo.
+- Royal Canin: Mini Adulto (razas pequeñas), Maxi Adulto (razas grandes), Kitten.
+- Hill's: Science Diet Adulto, Prescription Diet i/d (medicado digestivo).
+- Pet Master, Pro Pet, Super Perro (opciones económicas balanceadas).
+
+SNACKS Y PREMIOS: Galletas para perro, Premios dentales, Snacks naturales, Treats para entrenamiento, Huesos masticables, Premios para gato.
+
+SALUD Y SUPLEMENTOS:
+- Vitaminas multivitamínicas, Suplementos minerales, Suplemento articular, Suplemento piel y pelaje, Probióticos, Suplemento digestivo.
+- Antiparasitarios: Bayer (oral), Frontline (pipetas pulgas/garrapatas), Nexgard (masticable).
+- Cuidado: Shampoo medicado, Gotas óticas, Pasta dental para mascotas, Kit de cuidado dental.
+
+ACCESORIOS:
+- Fancy Pets: Collar ajustable, Correa resistente, Pechera acolchada.
+- Placa de identificación, Cama para perro/gato, Cobija polar, Transportadora plástica.
+- Comedero de acero, Bebedero antideslizante, Fuente de agua eléctrica.
+- Kong: Clásico (rellenable) y Puppy (cachorros).
+
+AVES: Vitakraft (mezcla pericos, snacks), Kaytee (Forti-Diet, mezcla canarios), ZuPreem FruitBlend (pellets con frutas).
+
+CONEJOS: Oxbow (heno Timothy, pellets adultos), Vitakraft (alimento completo, snacks heno/frutas), Kaytee Forti-Diet.
+
+PECES: Tetra (escamas tropical, Min granulado), Sera Vipan (escamas premium), API (pellets de fondo), Hikari (Cichlid Gold, Betta Bio-Gold).`;
 
 const SYSTEM_PROMPT = `Eres PetBot, el asistente amigable de la tienda de mascotas "Guau Guau Pet Shop" en Costa Rica.
 Tu única función es recomendar productos del catálogo según la mascota del cliente (tipo, edad, necesidades).
